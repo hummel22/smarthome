@@ -1,0 +1,5 @@
+
+
+MODEL_DHT22 = "DHT22"
+MODEL_DHT11 = "DHT11"
+

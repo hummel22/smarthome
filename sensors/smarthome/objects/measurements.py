@@ -1,0 +1,3 @@
+
+HUMIDITY = "humidity"
+TEMPERATURE = "temperature"

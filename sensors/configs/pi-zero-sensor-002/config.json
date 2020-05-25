@@ -1,0 +1,40 @@
+{
+  "sample_rate_sec": 60,
+  "controller": {
+    "name": "pi-zero-sensor-002",
+    "model": "raspberry pi zero w v1.1"
+  },
+  "sensors": [
+    {
+      "model": "DHT22",
+      "id": "Ab4f",
+      "location": "living room",
+      "reader": "DHT_LEGACY",
+      "config": {
+        "pin": 17
+      }
+    },
+    {
+      "model": "DHT22",
+      "id": "ffff",
+      "location": "living room",
+      "reader": "DHT_LEGACY",
+      "config": {
+        "pin": 27
+      }
+    }
+  ],
+  "dbs": [
+    {
+      "type": "influxdb",
+      "config": {
+        "host": "server",
+        "port": 12086,
+        "username": "root",
+        "password": "root",
+        "database": "smarthome"
+      }
+    }
+  ]
+}
+

@@ -1,0 +1,49 @@
+{
+  "sample_rate_sec": 30,
+  "controller": {
+    "name": "black raspberry pi",
+    "model": "raspberry pi B rev 1"
+  },
+  "sensors": [
+    {
+      "model": "DHT22",
+      "id": "D6F3",
+      "location": "desk",
+      "reader": "DHT_LEGACY",
+      "config": {
+        "pin": 4
+      }
+    },
+    {
+      "model": "DHT22",
+      "id": "DA87",
+      "location": "desk",
+      "reader": "DHT_LEGACY",
+      "config": {
+        "pin": 17
+      }
+    },
+        {
+      "model": "DHT11",
+      "id": "001",
+      "location": "desk",
+      "reader": "DHT_LEGACY",
+      "config": {
+        "pin": 27
+      }
+    }
+  ],
+  "dbs": [
+    {
+      "type": "influxdb",
+      "config": {
+        "host": "server",
+        "port": 12086,
+        "username": "root",
+        "password": "root",
+        "database": "smarthome"
+      }
+    }
+  ]
+}
+

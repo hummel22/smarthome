@@ -1,0 +1,20 @@
+---
+version: "2"
+services:
+  owm_austin:
+    container_name: owm_austin
+    image: ${REGISTRY}/${NAMESPACE}/${SERVICE}:${VERSION}
+    environment:
+      SOURCE: owm
+      CLIENT: server-ubuntu
+      INFLUXDBHOST: smarthome_influxdb
+      INFLUXDBPORT: 8086
+      INFLUXDBUSERNAME: root
+      INFLUXDBPASSWORD: root
+      INFLUXDBDATABASE: smarthome
+      READPERIODSECONDS: 60
+      LOCATION: "Austin"
+    network_mode: server_default
+    restart: always
+
+

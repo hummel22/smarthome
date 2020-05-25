@@ -1,0 +1,19 @@
+---
+version: "2"
+services:
+  openweathermap_crawler:
+    container_name: openweathermap_crawler
+    image: ${REGISTRY}/${NAMESPACE}/${SERVICE}:${VERSION}
+    environment:
+      SOURCE: owm
+      CLIENT: server-ubuntu
+      INFLUXDBHOST: smarthome_influxdb
+      INFLUXDBPORT: 8086
+      INFLUXDBUSERNAME: root
+      INFLUXDBPASSWORD: root
+      INFLUXDBDATABASE: smarthome
+      READPERIODSECONDS: 60
+    network_mode: server_default
+    restart: always
+
+

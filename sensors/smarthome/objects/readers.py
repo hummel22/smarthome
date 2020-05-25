@@ -1,0 +1,2 @@
+DHT = "DHT"
+DHT_LEGACY = "DHT_LEGACY"
